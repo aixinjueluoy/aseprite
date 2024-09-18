@@ -8,6 +8,13 @@ jobs:
   run:
     runs-on: ubuntu-latest
     steps:
+    - name: Check out code  
+      uses: actions/checkout@v2  
+
+    - name: Set up Node.js  
+      uses: actions/setup-node@v2  
+      with:  
+        node-version: '20'
     - uses: superbrothers/close-pull-request@v3
       with:
         comment: "We do not accept PRs to modify GitHub actions. Contact david@igara.com directly with patches for this."
